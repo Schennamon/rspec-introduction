@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ExchangeIt
   class Account
     include ExchangeIt::Utils::Uid
@@ -7,5 +9,6 @@ module ExchangeIt
     def initialize(user)
       @uid = hash(user.name, user.surname)
       @balance = 0
+    end
   end
 end

@@ -2,9 +2,9 @@
 
 module ExchangeIt
   class User
-    extend Forwardable 
+    extend Forwardable
 
-    attr_reader :name, :surname
+    attr_reader :name, :surname, :account
 
     def_delegators :account, :balance
 
@@ -16,7 +16,7 @@ module ExchangeIt
 
     private
 
-    def create_account 
+    def create_account
       @account = Account.new self
     end
   end
